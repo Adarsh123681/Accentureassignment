@@ -18,10 +18,7 @@ const page = () => {
   // filterCities according to search input
   const filterCities = cities.filter(city => city.toLowerCase().includes(searchcity.toLowerCase()))
 
-  // button on click 
-  const handleClickEvent = () => {
-    filterCities()
-  }
+  
   return (
     <>
       <div className="w-screen main">
@@ -30,7 +27,7 @@ const page = () => {
         </section>
         <form action="" className='w-[53%] text-end space-x-5 space-y-5'>
           <input type="search" value={searchcity} name="searchCity" id="city" className='p-3 text-blue-700 rounded-lg ' onChange={handleOnChange} />
-          <button className="search p-2 bg-blue-900 border-2 border-blue-500 rounded-lg inset-3 " onClick={handleClickEvent}>
+          <button className="search p-2 bg-blue-900 border-2 border-blue-500 rounded-lg inset-3 ">
             SEARCH
           </button>
         </form>
